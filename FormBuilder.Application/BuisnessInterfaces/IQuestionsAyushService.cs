@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace FormBuilder.Application.BuisnessInterfaces
 {
-    internal class IQuestionsAyushService
+    public interface IQuestionsAyushService
     {
+
     }
 }

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace FormBuilder.Application.BuisnessInterfaces
 {
-    internal class IAnswersAyushService
+    public interface IAnswersAyushService
     {
+
+        public List<>
+
     }
 }

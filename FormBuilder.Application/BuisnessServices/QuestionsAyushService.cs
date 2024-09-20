@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FormBuilder.Core;
 
 namespace FormBuilder.Application.BuisnessServices
 {
-    internal class QuestionsAyushService
+    public class QuestionsAyushService
     {
+        private readonly InboxContext _dbContext;
+
+        public QuestionsAyushService(InboxContext inboxContext)
+        {
+            _dbContext = inboxContext;
+        }
     }
 }

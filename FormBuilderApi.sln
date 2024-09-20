@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormBuilderApi", "FormBuild
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormBuilder.Core", "FormBuilder.Core\FormBuilder.Core.csproj", "{F3E5140F-85E0-4EAB-B8A2-573F5C83F017}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormBuilder.Application", "FormBuilder.Application\FormBuilder.Application.csproj", "{B9E1F723-9933-4148-B483-9204DE2F39D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormBuilder.Data", "FormBuilder.Data\FormBuilder.Data.csproj", "{7D88E304-FE13-49AD-95EE-2F498904F2E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{F3E5140F-85E0-4EAB-B8A2-573F5C83F017}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3E5140F-85E0-4EAB-B8A2-573F5C83F017}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3E5140F-85E0-4EAB-B8A2-573F5C83F017}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9E1F723-9933-4148-B483-9204DE2F39D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9E1F723-9933-4148-B483-9204DE2F39D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9E1F723-9933-4148-B483-9204DE2F39D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9E1F723-9933-4148-B483-9204DE2F39D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D88E304-FE13-49AD-95EE-2F498904F2E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D88E304-FE13-49AD-95EE-2F498904F2E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D88E304-FE13-49AD-95EE-2F498904F2E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D88E304-FE13-49AD-95EE-2F498904F2E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

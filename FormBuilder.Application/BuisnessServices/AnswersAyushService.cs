@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FormBuilder.Application.BuisnessServices
 {
-    internal class AnswersAyushService
+    public class AnswersAyushService
     {
     }
 }
