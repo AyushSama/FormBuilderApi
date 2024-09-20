@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FormBuilder.Core\FormBuilder.Core.csproj" />
+    <ProjectReference Include="..\FormBuilder.Data\FormBuilder.Data.csproj" />
   </ItemGroup>
 
 </Project>
