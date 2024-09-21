@@ -25,6 +25,15 @@ builder.Services.AddDbContextPool<InboxContext>(options =>
 builder.Services.AddScoped<IQuestionsAyushService, QuestionsAyushService>();
 builder.Services.AddScoped<IAnswersAyushService,AnswersAyushService>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularApp",
+        builder => builder
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -33,6 +42,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowAngularApp");
 
 app.UseHttpsRedirection();
 
