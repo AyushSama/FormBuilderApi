@@ -1,5 +1,6 @@
 ﻿using FormBuilder.Application.BuisnessInterfaces;
 using FormBuilder.Core;
+using FormBuilder.Core.DBEntities;
 using FormBuilder.Data.ModelEntities;
 using Microsoft.EntityFrameworkCore;
 
@@ -44,6 +45,12 @@ namespace FormBuilder.Application.BuisnessServices
                          };
 
             return result.ToList();
+        }
+
+        public void insertAnswers(AnswersAyush[] answers)
+        {
+            _dbContext.AnswersAyush.AddRange(answers);
+            _dbContext.SaveChanges();
         }
 
     }

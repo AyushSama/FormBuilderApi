@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FormBuilder.Core.DBEntities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace FormBuilder.Application.BuisnessInterfaces
 {
     public interface IQuestionsAyushService
     {
-
+        public void insertQuestion(QuestionsAyush question);
     }
 }

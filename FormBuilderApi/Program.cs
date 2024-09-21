@@ -22,7 +22,7 @@ builder.Services.AddDbContextPool<InboxContext>(options =>
         sqloptions.CommandTimeout(5);
     }));
 
-//builder.Services.AddScoped<IQuestionsAyushService,QuestionsAyushService>();
+builder.Services.AddScoped<IQuestionsAyushService, QuestionsAyushService>();
 builder.Services.AddScoped<IAnswersAyushService,AnswersAyushService>();
 
 var app = builder.Build();

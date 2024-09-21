@@ -1,4 +1,5 @@
 ﻿using FormBuilder.Application.BuisnessInterfaces;
+using FormBuilder.Core.DBEntities;
 using FormBuilder.Data.ModelEntities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,10 +10,12 @@ namespace FormBuilderApi.Controllers
     public class QuestionAnswerController : Controller
     {
         private readonly IAnswersAyushService _answersAyushService;
+        private readonly IQuestionsAyushService _questionsAyushService;
 
-        public QuestionAnswerController(IAnswersAyushService answersAyushService)
+        public QuestionAnswerController(IAnswersAyushService answersAyushService, IQuestionsAyushService questionsAyushService)
         {
             _answersAyushService = answersAyushService;
+            _questionsAyushService = questionsAyushService;
         }
 
 
@@ -23,6 +26,26 @@ namespace FormBuilderApi.Controllers
             return Ok(list); // Return 200 OK with the list
         }
 
+        [HttpGet("singleQuestion")]
+        public ActionResult<List<QuestAnsModel>> GetSingle(int questionId) // Use ActionResult for proper HTTP responses
+        {
+            var list = _answersAyushService.GetSingle(questionId);
+            return Ok(list); // Return 200 OK with the list
+        }
+
+        [HttpPost("insertAnswers")]
+        public ActionResult InsertAnswers([FromBody] AnswersAyush[] answers) // Use ActionResult for proper HTTP responses
+        {   
+            _answersAyushService.insertAnswers(answers);
+            return Ok("Answers Added Successfully");
+        }
+
+        [HttpPost("insertQuestion")]
+        public ActionResult InsertQuestion([FromBody] QuestionsAyush questions) // Use ActionResult for proper HTTP responses
+        {
+            _questionsAyushService.insertQuestion(questions);
+            return Ok(new { questionId = questions.questionId });
+        }
 
     }
 }
