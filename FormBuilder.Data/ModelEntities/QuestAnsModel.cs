@@ -11,6 +11,7 @@ namespace FormBuilder.Data.ModelEntities
     public class QuestAnsModel
     {
         public string question { get; set; }
+        public string questionType { get; set; }
         public int answerOption { get; set; }
         public string answer { get; set; }
         public bool correct { get; set; }

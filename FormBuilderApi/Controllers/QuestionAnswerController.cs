@@ -34,6 +34,17 @@ namespace FormBuilderApi.Controllers
             return Ok(list); // Return 200 OK with the list
         }
 
+        [HttpPost("questionList")]
+        public ActionResult<List<List<QuestAnsModel>>> QuestionList([FromBody] int[] questionIds) // Use ActionResult for proper HTTP responses
+        {   
+            List<List<QuestAnsModel>> questAnsModels = new List<List<QuestAnsModel>>();
+            foreach (int questionId in questionIds)
+            {
+                questAnsModels.Add(_answersAyushService.GetSingle(questionId));
+            }
+            return Ok(questAnsModels); // Return 200 OK with the list
+        }
+
         [HttpPost("insertAnswers")]
         public ActionResult InsertAnswers([FromBody] AnswersAyush[] answers) // Use ActionResult for proper HTTP responses
         {   

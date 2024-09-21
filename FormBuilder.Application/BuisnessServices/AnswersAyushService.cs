@@ -23,6 +23,7 @@ namespace FormBuilder.Application.BuisnessServices
                          select new QuestAnsModel
                          {
                              question = q.question,
+                             questionType = q.questionType,
                              answerOption = a.answerOption,
                              answer = a.answer,
                              correct = a.correct
@@ -39,6 +40,7 @@ namespace FormBuilder.Application.BuisnessServices
                          select new QuestAnsModel
                          {
                              question = q.question,
+                             questionType = q.questionType,
                              answerOption = a.answerOption,
                              answer = a.answer,
                              correct = a.correct
