@@ -7,7 +7,7 @@ namespace FormBuilder.Application.BuisnessInterfaces
 
         public List<QuestAnsModel> GetAll();
 
-        public List<QuestAnsModel> GetSingle();
+        public List<QuestAnsModel> GetSingle(int questionId);
 
 
     }

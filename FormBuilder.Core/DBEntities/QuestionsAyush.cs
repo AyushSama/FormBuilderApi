@@ -8,5 +8,7 @@ namespace FormBuilder.Core.DBEntities
         public int questionId {  get; set; }
 
         public string question {  get; set; }
+        
+        public string questionType {  get; set; }
     }
 }
