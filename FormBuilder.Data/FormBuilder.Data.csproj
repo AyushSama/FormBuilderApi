@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FormBuilder.Core\FormBuilder.Core.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -13,10 +13,11 @@ namespace FormBuilder.Application.BuisnessServices
             _dbContext = inboxContext;
         }
 
-        public void insertQuestion(QuestionsAyush question)
+        public QuestionsAyush insertQuestion(QuestionsAyush question)
         {
             _dbContext.QuestionsAyush.Add(question);
             _dbContext.SaveChanges();
+            return question;
         }
     }
 }

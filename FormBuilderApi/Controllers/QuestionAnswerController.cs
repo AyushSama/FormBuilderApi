@@ -1,6 +1,7 @@
 ﻿using FormBuilder.Application.BuisnessInterfaces;
 using FormBuilder.Core.DBEntities;
 using FormBuilder.Data.ModelEntities;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FormBuilderApi.Controllers
@@ -41,10 +42,24 @@ namespace FormBuilderApi.Controllers
         }
 
         [HttpPost("insertQuestion")]
-        public ActionResult InsertQuestion([FromBody] QuestionsAyush questions) // Use ActionResult for proper HTTP responses
+        public ActionResult<object> InsertQuestion([FromBody] QuestionsAyush questions) // Use ActionResult for proper HTTP responses
         {
             _questionsAyushService.insertQuestion(questions);
             return Ok(new { questionId = questions.questionId });
+        }
+
+        [HttpPost("insertQuestionAnswer")]
+        public ActionResult InsertQuestionAnswer([FromBody] MainModel model) // Use ActionResult for proper HTTP responses
+        {
+
+            var question = _questionsAyushService.insertQuestion(model.questionsAyush);
+
+            var answers = model.answersAyush;
+            for(int i = 0;i<answers.Length;i++)
+                answers[i].questionId = question.questionId;
+            _answersAyushService.insertAnswers(answers);
+
+            return Ok(new { message = "Question and Answers Added Successfully", questionId = question.questionId });
         }
 
     }

@@ -9,6 +9,6 @@ namespace FormBuilder.Application.BuisnessInterfaces
 {
     public interface IQuestionsAyushService
     {
-        public void insertQuestion(QuestionsAyush question);
+        public QuestionsAyush insertQuestion(QuestionsAyush question);
     }
 }
