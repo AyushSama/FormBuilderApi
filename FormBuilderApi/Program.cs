@@ -17,7 +17,7 @@ builder.Services.AddHttpClient();
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddDbContextPool<InboxContext>(options =>
-    options.UseSqlServer("Server=AyushSama\\SQLEXPRESS;Database=tta_dev;Trusted_Connection=True;TrustServerCertificate=True;", sqloptions =>
+    options.UseSqlServer("Server=172.16.1.90;uid=TTA2024;pwd=Rizvi@2024;database=RizviTTA;TrustServerCertificate=True;", sqloptions =>
     {
         sqloptions.CommandTimeout(5);
     }));
